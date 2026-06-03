@@ -1,1 +1,52 @@
-# WebApplication1
+Aquí tienes el texto listo para copiar y pegar en tu archivo README.md. He mantenido un tono técnico y neutral, tal como lo pediste.
+CitasApp
+
+Sistema de gestión para citas médicas implementado en ASP.NET Core MVC utilizando .NET 10. La aplicación permite listar pacientes, médicos y gestionar una agenda de citas mediante un patrón de arquitectura MVC con inyección de dependencias.
+Especificaciones técnicas
+
+    Framework: ASP.NET Core MVC
+
+    Lenguaje: C# (.NET 10.0)
+
+    Persistencia: Archivos JSON en el directorio /data
+
+    Patrón de diseño: Repositorio e Inyección de Dependencias
+
+Arquitectura
+
+El sistema separa las responsabilidades en las siguientes capas:
+
+    Models: Contiene las entidades del dominio (Paciente, Medico, Cita).
+
+    Interfaces: Define los contratos (IPacienteRepository, IMedicoRepository, ICitaRepository) para la capa de datos.
+
+    Repositories: Implementación concreta de la lógica de persistencia (lectura/escritura de archivos JSON).
+
+    Controllers: Gestión de rutas y coordinación de flujo entre modelos y vistas.
+/Controllers      # Lógica de enrutamiento
+/data             # Almacenamiento de archivos JSON
+/Interfaces       # Contratos de repositorios
+/Models           # Entidades del sistema
+/Repositories     # Implementación de acceso a datos
+/Views            # Interfaz de usuario (Razor)
+Program.cs        # Configuración del servicio de inyección de dependencias
+
+Funcionalidades implementadas
+
+    /Paciente: Visualización de pacientes registrados.
+
+    /Medico: Directorio de médicos disponibles.
+
+    /Cita: Agenda general de citas médicas.
+
+    /Cita/PorPaciente: Filtrado de citas por ID de paciente.
+
+Instrucciones de ejecución
+
+    Requisitos: .NET 10.0 SDK y Visual Studio 2022.
+
+    Abrir la solución en Visual Studio.
+
+    Compilar el proyecto (Build Solution).
+
+    Ejecutar el proyecto mediante F5 o el comando dotnet run.# WebApplication1
